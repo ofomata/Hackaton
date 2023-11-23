@@ -27,14 +27,18 @@ function toggleMenu() {
 
 function toggleSVG(buttonId) {
     const svgContainer = document.querySelector('.actions:nth-child(' + buttonId + ') .svg-container');
-    const clickedSVG = svgContainer.querySelector('.clicked-svg');
+    const initialSvg = svgContainer.querySelector('.initial-svg');
 
     if (svgContainer.classList.contains('clicked')) {
-        clickedSVG.style.display = 'none';
         svgContainer.classList.remove('clicked');
     } else {
-        clickedSVG.style.display = 'inline-block';
-        svgContainer.classList.add('clicked');
+        svgContainer.classList.add('active');
+        initialSvg.style.display = 'none'; // Set display to 'none' on the first click
+        svgContainer.addEventListener('animationend', function () {
+            svgContainer.classList.remove('active');
+            svgContainer.classList.add('clicked');
+            initialSvg.style.display = ''; // Remove the display property on the second click
+        }, { once: true });
     }
 }
 

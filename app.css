@@ -256,19 +256,34 @@ input::placeholder{
   display: inline-block;
 }
 
-.svg-container:active .initial-svg,
-.clicked .hovered-svg {
-  display: none;
-}
-
-.svg-container:active .active-svg,
-.clicked .clicked-svg {
+.svg-container.active .active-svg {
   display: inline-block;
+  animation: rotateActive 0.5s linear forwards;
 }
 
-.svg-container:active + .svg-container {
-  transform: scale(0.8);
-  opacity: 1;
+.svg-container.clicked .clicked-svg {
+  display: inline-block;
+  opacity: 0;
+  animation: fadeInClicked 0.5s ease-in-out forwards;
+  animation-delay: 0.1ms; /* Delay the appearance of clicked-svg after rotation */
+}
+
+@keyframes rotateActive {
+  0% {
+      transform: rotate(0deg);
+  }
+  100% {
+      transform: rotate(360deg);
+  }
+}
+
+@keyframes fadeInClicked {
+  0% {
+      opacity: 0;
+  }
+  100% {
+      opacity: 1;
+  }
 }
 
 .section1, .section2, .section3, .section4, .section5 {
