@@ -75,32 +75,37 @@ document.addEventListener("DOMContentLoaded", function () {
     const toggleButtons = document.querySelectorAll(".toggleButton");
 
     let progress = 0;
-    let lastClickedButton = null;
+    let buttonActions = [];
 
     toggleButtons.forEach(button => {
         button.addEventListener("click", function () {
+            const buttonIndex = Array.from(toggleButtons).indexOf(button);
+
             // Check if the same button is clicked again
-            if (lastClickedButton === button) {
-                // Decrease the progress by 20
-                progress -= 20;
+            if (buttonActions[buttonIndex]) {
+                // Decrease the progress by the stored action
+                progress -= buttonActions[buttonIndex];
 
                 // Ensure the progress does not go below 0
                 if (progress < 0) {
                     progress = 0;
                 }
+
+                // Reset the stored action for this button
+                buttonActions[buttonIndex] = 0;
             } else {
                 // Different button clicked, continue from the current progress
                 // Increment the progress by 20
                 progress += 20;
-                
+
                 // Ensure the progress does not exceed 100
                 if (progress > 100) {
                     progress = 0; // Reset to 0 if it reaches 100
                 }
-            }
 
-            // Update the last clicked button
-            lastClickedButton = button;
+                // Save the action for this button
+                buttonActions[buttonIndex] = 20;
+            }
 
             // Update the progress bar and completion text
             updateProgressBar();
@@ -109,17 +114,17 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
     // Load saved progress on page load
-    const savedProgress = localStorage.getItem("progress");
-    if (savedProgress !== null) {
-        progress = parseInt(savedProgress, 10);
+    const savedActions = localStorage.getItem("buttonActions");
+    if (savedActions !== null) {
+        buttonActions = JSON.parse(savedActions);
         updateProgressBar();
         updateCompletionText();
     }
 
     function updateProgressBar() {
         progressBar.style.width = `${progress}%`;
-        // Save progress to local storage
-        localStorage.setItem("progress", progress);
+        // Save button actions to local storage
+        localStorage.setItem("buttonActions", JSON.stringify(buttonActions));
     }
 
     function updateCompletionText() {
@@ -127,6 +132,7 @@ document.addEventListener("DOMContentLoaded", function () {
         updateText.textContent = `${completionFraction} / 5 completed`;
     }
 });
+
 
 
 function toggleSection(section, action) {
