@@ -113,13 +113,8 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     });
 
-    // Load saved progress on page load
-    const savedActions = localStorage.getItem("buttonActions");
-    if (savedActions !== null) {
-        buttonActions = JSON.parse(savedActions);
-        updateProgressBar();
-        updateCompletionText();
-    }
+    // Clear stored progress on every page load
+    localStorage.removeItem("buttonActions");
 
     function updateProgressBar() {
         progressBar.style.width = `${progress}%`;
@@ -132,6 +127,8 @@ document.addEventListener("DOMContentLoaded", function () {
         updateText.textContent = `${completionFraction} / 5 completed`;
     }
 });
+
+
 
 
 
