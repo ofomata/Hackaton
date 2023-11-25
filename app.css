@@ -33,6 +33,7 @@ form {
   padding: 0 10px;
   border-radius: 7px;
   border: .5px solid #616161;
+  width: 100%;
 }
 form:hover{
   border: .8px solid #F7F7F7;
