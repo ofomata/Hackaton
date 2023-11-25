@@ -69,6 +69,7 @@ input::placeholder{
 .notify-btn svg{
   width: 22px;
   height: auto;
+  padding: 4px;
 }
 .notify-btn svg:hover{
   background: #656266;
@@ -78,6 +79,7 @@ input::placeholder{
 .notify-btn svg:active{
   background: #656266;
   border-radius: 4px;
+  
 }
 .notify-btn svg:focus{
   border: 1px solid #005BD3;
@@ -367,6 +369,9 @@ button:focus{
   align-items: center;
   justify-content: space-between;
   padding: 5px 10px;
+  background: #F1F1F1;
+  margin-bottom: 5px;
+  border-radius: 4px;
 }
 .act1:hover{
   background: #F1F1F1;
