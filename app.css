@@ -30,11 +30,9 @@ header{
 
 form {
   background: #322F33;
-  display: flex;
   padding: 0 10px;
   border-radius: 7px;
   border: .5px solid #616161;
-  min-width: 55%;
 }
 form:hover{
   border: .8px solid #F7F7F7;
@@ -60,6 +58,7 @@ form input{
   border: none;
   color: #EBEBEB;
   display: block;
+  width: 100%;
 }
 input::placeholder{
   color: #EBEBEB;
@@ -530,102 +529,98 @@ ul li a{
 
   
 @media (min-width: 768px) {
-    .logo2 svg{
-        display: unset;
-    }
-    .logo2{
-        position: absolute;
-        left: 16px;
-    }
-    .logo svg{
-        display: none;
-    }
-    
-    form{
-        min-width: 25%;
-        margin-left: 180px;
-    }
-
-    .right .notify-btn svg{
-        background: #322F33;
-        padding: 4px;
-        border-radius: 4px;
-    }
-    .notify-btn svg:hover{
-        background: #656266;
-        cursor: pointer;
-    }
-    .notify-btn svg:active{
+  .logo2 svg{
+      display: unset;
+  }
+  .logo2{
+      position: absolute;
+      left: 16px;
+  }
+  .logo svg{
+      display: none;
+  }
+  
+  form{
+      width: 35%;
+      margin-left: 180px;
+  }
+  .right .notify-btn svg{
+      background: #322F33;
+      padding: 4px;
+      border-radius: 4px;
+  }
+  .notify-btn svg:hover{
       background: #656266;
-    }
+      cursor: pointer;
+  }
+  .notify-btn svg:active{
+    background: #656266;
+  }
   .notify-btn svg:focus{
     border: 1px solid #005BD3;
     }
-    .account{
-        background: #322F33;
-        padding: 2px;
-        border-radius: 4px;
-        padding-left: 6px;
-        display: flex;
-        align-items: center;
+  .account{
+    background: #322F33;
+    padding: 2px;
+    border-radius: 4px;
+    padding-left: 6px;
+    display: flex;
+    align-items: center;
     }
-    .account:hover{
-        background: #656266;
-        cursor: pointer;
+  .account:hover{
+    background: #656266;
+    cursor: pointer;
     }
-    .account:active{
-      background: #656266;
+  .account:active{
+    background: #656266;
     }
-    .account:focus{
-      border: .8px solid #005BD3;
+  .account:focus{
+    border: .8px solid #005BD3;
     }
-    .account p{
-        display: unset;
+  .account p{
+    display: unset;
     }
-
-    main{
-        display: grid;
-        place-items: center;
+  main{
+    display: grid;
+    place-items: center;
+  }
+  .hero{
+    display: flex;
+    align-items: center;
+    gap: 200px;
+    margin-top: 32px;
+    border-radius: 6px;
+    padding: 8px 16px;
     }
-    .hero{
-        display: flex;
-        align-items: center;
-        gap: 200px;
-        margin-top: 32px;
-        border-radius: 6px;
-        padding: 8px 16px;
+  .for-flex{
+    display: flex;
+    align-items: center;
+    gap: 12px;
     }
-    .for-flex{
-        display: flex;
-        align-items: center;
-        gap: 12px;
+  .hero p{
+    padding: unset;
+    margin: unset;
     }
-    .hero p{
-        padding: unset;
-        margin: unset;
+  .close svg{
+    position: unset;
     }
-
-    .close svg{
-        position: unset;
+  .sub-hero{
+    border-radius: 12px;
+    padding: 8px 16px;
+    width: 48.8%;
     }
-
-    .sub-hero{
-        border-radius: 12px;
-        padding: 8px 16px;
-        width: 48.8%;
-    }
-    .guide{
-        gap: 290px;
+  .guide{
+    gap: 290px;
     }
 
-    .menu{
-        width: 23.5%;
+  .menu{
+    width: 23.5%;
     }
-    .alert{
-      width: 18%;
+  .alert{
+    width: 18%;
     }
-    .image img{
-      display: unset;
+  .image img{
+    display: unset;
     }
-}
+  }
   

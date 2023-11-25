@@ -1,27 +1,30 @@
 const button = document.getElementById("nav-menu");
 const menu = document.querySelector(".menu");
 
-// Toggle menu visibility when button is clicked
-button.addEventListener("click", (event) => {
-    toggleMenu();
-    event.stopPropagation(); // Prevent the click event from reaching the document
-});
-
-// Close the menu when a click is detected outside the menu
-document.addEventListener("click", () => {
-    if (menu.style.display === "block") {
-        menu.style.display = "none";
-    }
-});
-
-// Function to toggle menu visibility
-function toggleMenu() {
+button.addEventListener("click", (event) =>{
     if (menu.style.display === "block") {
         menu.style.display = "none";
     } else {
         menu.style.display = "block";
     }
-}
+
+    alert.style.display = "none";
+});
+
+
+
+const notify = document.getElementById("notification");
+const alert = document.querySelector(".alert");
+
+notify.addEventListener("click", (event) =>{
+    if (alert.style.display === "block") {
+        alert.style.display = "none";
+    } else {
+        alert.style.display = "block";
+    }
+
+    menu.style.display = "none";
+});
 
 
 
@@ -39,31 +42,6 @@ function toggleSVG(buttonId) {
             svgContainer.classList.add('clicked');
             initialSvg.style.display = ''; // Remove the display property on the second click
         }, { once: true });
-    }
-}
-
-const notify = document.getElementById("notification");
-const alert = document.querySelector(".alert");
-
-// Toggle alert visibility when notify is clicked
-notify.addEventListener("click", (event) => {
-    toggleAlert();
-    event.stopPropagation(); // Prevent the click event from reaching the document
-});
-
-// Close the alert when a click is detected outside the alert
-document.addEventListener("click", () => {
-    if (alert.style.display === "block") {
-        alert.style.display = "none";
-    }
-});
-
-// Function to toggle alert visibility
-function toggleAlert() {
-    if (alert.style.display === "block") {
-        alert.style.display = "none";
-    } else {
-        alert.style.display = "block";
     }
 }
 
@@ -132,68 +110,49 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 
-function toggleSection(section, action) {
-    if (section.style.display === "flex") {
-        // Section is already open, do nothing
-        return;
-    }
+function initializeSectionButton(buttonId, sectionSelector, actionSelector) {
+    const triggerButton = document.getElementById(buttonId);
+    const { section, action } = getSectionAndAction(sectionSelector, actionSelector);
 
-    // Close all sections
+    triggerButton.addEventListener("click", () => {
+        toggleSection(section, action);
+    });
+}
+
+function toggleSection(section, action) {
     closeAllSections();
 
-    // Open the clicked section
-    section.style.display = "flex";
-    action.style.background = "#F7F7F7";
+    if (section.style.display !== "flex") {
+        section.style.display = "flex";
+        action.style.background = "#F7F7F7";
+    }
 }
 
 function closeAllSections() {
-    const allSections = [details, detail, info, details4, details5];
-    const allActions = [changeColor, changeColors, colors, changeColor4, changeColor5];
+    sections.forEach(({ sectionSelector, actionSelector }) => {
+        const { section, action } = getSectionAndAction(sectionSelector, actionSelector);
 
-    for (let i = 0; i < allSections.length; i++) {
-        allSections[i].style.display = "none";
-        allActions[i].style.background = "";
-    }
+        section.style.display = "none";
+        action.style.background = "";
+    });
 }
 
-const openSetUp = document.getElementById("open");
-const details = document.querySelector(".section1");
-const changeColor = document.querySelector(".actions");
+const sections = [
+    { buttonId: "open", sectionSelector: ".section1", actionSelector: ".actions" },
+    { buttonId: "open1", sectionSelector: ".section2", actionSelector: ".actions2" },
+    { buttonId: "open2", sectionSelector: ".section3", actionSelector: ".actions3" },
+    { buttonId: "open3", sectionSelector: ".section4", actionSelector: ".actions4" },
+    { buttonId: "open4", sectionSelector: ".section5", actionSelector: ".actions5" },
+];
 
-openSetUp.addEventListener("click", (event) => {
-    toggleSection(details, changeColor);
-});
+function getSectionAndAction(sectionSelector, actionSelector) {
+    const section = document.querySelector(sectionSelector);
+    const action = document.querySelector(actionSelector);
+    return { section, action };
+}
 
-const openSet = document.getElementById("open1");
-const detail = document.querySelector(".section2");
-const changeColors = document.querySelector(".actions2");
-
-openSet.addEventListener("click", (event) => {
-    toggleSection(detail, changeColors);
-});
-
-const openBtn = document.getElementById("open2");
-const info = document.querySelector(".section3");
-const colors = document.querySelector(".actions3");
-
-openBtn.addEventListener("click", (event) => {
-    toggleSection(info, colors);
-});
-
-const openSetUp4 = document.getElementById("open3");
-const details4 = document.querySelector(".section4");
-const changeColor4 = document.querySelector(".actions4");
-
-openSetUp4.addEventListener("click", (event) => {
-    toggleSection(details4, changeColor4);
-});
-
-const openSetUp5 = document.getElementById("open4");
-const details5 = document.querySelector(".section5");
-const changeColor5 = document.querySelector(".actions5");
-
-openSetUp5.addEventListener("click", (event) => {
-    toggleSection(details5, changeColor5);
+sections.forEach(({ buttonId, sectionSelector, actionSelector }) => {
+    initializeSectionButton(buttonId, sectionSelector, actionSelector);
 });
 
 
@@ -226,6 +185,25 @@ bringUp.addEventListener("click", (event) => {
 });
 
 
+
+
+
+
+function setupSectionButton(buttonId, targetSectionSelector, targetActionSelector) {
+    const button = document.getElementById(buttonId);
+    const targetSection = document.querySelector(targetSectionSelector);
+    const targetAction = document.querySelector(targetActionSelector);
+
+    button.addEventListener("click", () => {
+        toggleSection(targetSection, targetAction);
+    });
+}
+
+setupSectionButton("storeSection", ".section2", ".actions2");
+setupSectionButton("productSection", ".section3", ".actions3");
+setupSectionButton("domainSection", ".section4", ".actions4");
+setupSectionButton("nameSection", ".section5", ".actions5");
+setupSectionButton("paymentSection", ".section1", ".actions1");
 
 
 
