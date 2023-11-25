@@ -219,6 +219,3 @@ setupSectionButton("paymentSection", ".section1", ".actions1");
 
 
 
-
-
-

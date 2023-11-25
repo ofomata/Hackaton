@@ -39,10 +39,11 @@ form:hover{
   border: .8px solid #F7F7F7;
 }
 form:active{
-  border: 2px solid #F0F0F0;
+  border: 1.5px solid #F0F0F0;
 }
-form:focus{
-  border: 2px solid #005BD3;
+form:focus-within{
+  border: 2px solid #F0F0F0;
+  outline: none;
 }
 .search-box svg{
   width: 12px;
@@ -81,8 +82,9 @@ input::placeholder{
   border-radius: 4px;
   
 }
-.notify-btn svg:focus{
-  border: 1px solid #005BD3;
+.notify-btn:focus{
+  border: 2px solid #005BD3;
+  outline: none;
   border-radius: 4px;
 }
 
@@ -135,7 +137,8 @@ input::placeholder{
   background: #F7F7F7;
 }
 .hero a:focus{
-  border: 1px solid #005BD3;
+  border: 2px solid #005BD3;
+  outline: none;
 }
 
 .sub-hero{
@@ -182,7 +185,8 @@ input::placeholder{
   border-radius: 4px;
 }
 .dropdown:focus{
-  border: 1px solid #005BD3;
+  border: 2px solid #005BD3;
+  outline: none;
   border-radius: 4px;
 }
 .guide .dropdown1 svg{
@@ -204,7 +208,8 @@ input::placeholder{
   border-radius: 4px;
 }
 .dropdown1:focus{
-  border: 1px solid #005BD3;
+  border: 2px solid #005BD3;
+  outline: none;
   border-radius: 4px;
 }
 
@@ -328,7 +333,8 @@ button:active{
   background: #1C181d;
 }
 button:focus{
-  border: 1px solid #005BD3;
+  border: 2px solid #005BD3;
+  outline: none;
 }
 .product{
   display: flex;
@@ -382,7 +388,8 @@ button:focus{
   border-radius: 4px;
 }
 .act1:focus{
-  border: 1px solid #005BD3;
+  border: 2px solid #005BD3;
+  outline: none;
   border-radius: 4px;
 }
 .act1 svg{
@@ -410,6 +417,8 @@ button:focus{
   align-items: center;
   gap: 10px;
   padding: 5px 10px;
+  text-decoration: none;
+  color: #1C181d;
 }
 .act2:hover{
   background: #F1F1F1;
@@ -420,7 +429,8 @@ button:focus{
   border-radius: 4px;
 }
 .act2:focus{
-  border: 1px solid #005BD3;
+  border: 2px solid #005BD3;
+  outline: none;
   border-radius: 4px;
 }
 .act2 svg{
@@ -439,36 +449,37 @@ hr {
 }
 ul li{
   list-style: none;
-  padding: 5px;
 }
-ul li:hover{
+ul li a:hover{
   background: #F1F1F1;
   border-radius: 4px;
 }
-ul li:active{
+ul li a:active{
   background: #F1F1F1;
   border-radius: 4px;
 }
-ul li:focus{
-  border: 1px solid #005BD3;
+ul li a:focus{
+  border: 2px solid #005BD3;
   border-radius: 4px;
+  outline: none;
 }
 ul li a{
   text-decoration: none;
   color: #1C181d;
   font-size: 12px;
-}
-.acct{
-  text-decoration: none;
-  color: #1C181d;
-  font-size: 12px;
+  display: block;
+  padding: 7px;
 }
 .acct p{
   font-weight: bold;
   margin-left: 5px;
+  font-size: 12px;
 }
 .acct small{
   margin-left: 5px;
+}
+.acct{
+  margin: 10px 0;
 }
 
 
@@ -562,9 +573,6 @@ ul li a{
   .notify-btn svg:active{
     background: #656266;
   }
-  .notify-btn svg:focus{
-    border: 1px solid #005BD3;
-    }
   .account{
     background: #322F33;
     padding: 2px;
@@ -581,7 +589,8 @@ ul li a{
     background: #656266;
     }
   .account:focus{
-    border: .8px solid #005BD3;
+    border: 2px solid #005BD3;
+    outline: none;
     }
   .account p{
     display: unset;
