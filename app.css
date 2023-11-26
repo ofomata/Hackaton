@@ -559,7 +559,7 @@ ul li a{
 
 
   
-@media (min-width: 768px) {
+@media (min-width: 680px) {
   .logo2 svg{
       display: unset;
   }

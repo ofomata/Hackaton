@@ -1,17 +1,63 @@
 const button = document.getElementById("nav-menu");
 const menu = document.querySelector(".menu");
 
-button.addEventListener("click", (event) =>{
-    if (menu.style.display === "block") {
-        menu.style.display = "none";
-        button.setAttribute("aria-expanded", "false");
-    } else {
-        menu.style.display = "block";
-        button.setAttribute("aria-expanded", "true");
-    }
+button.addEventListener("click", (event) => {
+    toggleMenu();
 
     alert.style.display = "none";
 });
+
+document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape" && menu.style.display === "block") {
+        closeMenu();
+    } else if (event.key === "Enter" && document.activeElement === button && menu.style.display !== "block") {
+        openMenu();
+    } else if (menu.style.display === "block" && (event.key === "ArrowUp" || event.key === "ArrowDown")) {
+        navigateMenu(event);
+    }
+});
+
+function toggleMenu() {
+    if (menu.style.display === "block") {
+        closeMenu();
+    } else {
+        openMenu();
+    }
+}
+
+function openMenu() {
+    menu.style.display = "block";
+    button.setAttribute("aria-expanded", "true");
+
+    const firstFocusableElement = menu.querySelector('a, button, input, select, textarea, [tabindex]:not([tabindex="-1"])');
+    if (firstFocusableElement) {
+        firstFocusableElement.focus();
+    }
+}
+
+function closeMenu() {
+    menu.style.display = "none";
+    button.setAttribute("aria-expanded", "false");
+}
+
+function navigateMenu(event) {
+    const focusableElements = menu.querySelectorAll('a, button, input, select, textarea, [tabindex]:not([tabindex="-1"])');
+    const focusedElement = document.activeElement;
+
+    let index = Array.from(focusableElements).indexOf(focusedElement);
+
+    if (index !== -1) {
+        if (event.key === "ArrowUp" && index > 0) {
+            index--;
+        } else if (event.key === "ArrowDown" && index < focusableElements.length - 1) {
+            index++;
+        }
+    }
+
+    focusableElements[index].focus();
+}
+
+
 
 
 
@@ -19,18 +65,38 @@ const notify = document.getElementById("notification");
 const alert = document.querySelector(".alert");
 
 notify.addEventListener("click", (event) => {
-  // Toggle the visibility of the alert
-  if (alert.style.display === "block") {
-    alert.style.display = "none";
-    notify.setAttribute("aria-expanded", "false");
-  } else {
-    alert.style.display = "block";
-    notify.setAttribute("aria-expanded", "true");
-  }
+  toggleAlert();
 
   // Additional logic (if any)
   menu.style.display = "none";
 });
+
+document.addEventListener("keydown", (event) => {
+  if (event.key === "Escape" && alert.style.display === "block") {
+    closeAlert();
+  } else if (event.key === "Enter" && document.activeElement === notify && alert.style.display !== "block") {
+    openAlert();
+  }
+});
+
+function toggleAlert() {
+  if (alert.style.display === "block") {
+    closeAlert();
+  } else {
+    openAlert();
+  }
+}
+
+function openAlert() {
+  alert.style.display = "block";
+  notify.setAttribute("aria-expanded", "true");
+}
+
+function closeAlert() {
+  alert.style.display = "none";
+  notify.setAttribute("aria-expanded", "false");
+}
+
 
 
 
@@ -58,6 +124,27 @@ function toggleSVG(buttonId) {
         }, { once: true });
     }
 }
+
+
+
+
+
+document.addEventListener("keydown", function (event) {
+    if (event.key === "Enter") {
+        // Find the focused element
+        const focusedElement = document.activeElement;
+
+        // Check if the focused element is a button with the class "toggleButton"
+        if (focusedElement && focusedElement.classList.contains("toggleButton")) {
+            // Trigger a click event on the focused button
+            focusedElement.click();
+        }
+    }
+});
+
+
+
+
 
 
 
@@ -176,8 +263,19 @@ const close = document.querySelector(".close");
 const hero = document.querySelector(".hero");
 
 close.addEventListener("click", (event) => {
-    hero.remove();
+    removeHero();
 });
+
+close.addEventListener("keydown", (event) => {
+    if (event.key === "Enter") {
+        removeHero();
+    }
+});
+
+function removeHero() {
+    hero.remove();
+}
+
 
 
 //To close and open the card
@@ -198,6 +296,21 @@ bringUp.addEventListener("click", (event) => {
     bringUp.style.display = "none"
 });
 
+dropDown.addEventListener("keydown", (event) => {
+    if (event.key === "Enter") {
+        section.style.display = "none";
+        dropDown.style.display = "none";
+        bringUp.style.display = "block";
+    }
+});
+
+bringUp.addEventListener("keydown", (event) => {
+    if (event.key === "Enter") {
+        section.style.display = "block";
+        dropDown.style.display = "block";
+        bringUp.style.display = "none";
+    }
+});
 
 
 
