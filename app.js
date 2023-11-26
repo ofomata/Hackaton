@@ -4,8 +4,10 @@ const menu = document.querySelector(".menu");
 button.addEventListener("click", (event) =>{
     if (menu.style.display === "block") {
         menu.style.display = "none";
+        button.setAttribute("aria-expanded", "false");
     } else {
         menu.style.display = "block";
+        button.setAttribute("aria-expanded", "true");
     }
 
     alert.style.display = "none";
@@ -16,21 +18,33 @@ button.addEventListener("click", (event) =>{
 const notify = document.getElementById("notification");
 const alert = document.querySelector(".alert");
 
-notify.addEventListener("click", (event) =>{
-    if (alert.style.display === "block") {
-        alert.style.display = "none";
-    } else {
-        alert.style.display = "block";
-    }
+notify.addEventListener("click", (event) => {
+  // Toggle the visibility of the alert
+  if (alert.style.display === "block") {
+    alert.style.display = "none";
+    notify.setAttribute("aria-expanded", "false");
+  } else {
+    alert.style.display = "block";
+    notify.setAttribute("aria-expanded", "true");
+  }
 
-    menu.style.display = "none";
+  // Additional logic (if any)
+  menu.style.display = "none";
 });
+
 
 
 
 function toggleSVG(buttonId) {
     const svgContainer = document.querySelector('.actions:nth-child(' + buttonId + ') .svg-container');
     const initialSvg = svgContainer.querySelector('.initial-svg');
+
+        // Toggle the checked state
+    const isChecked = svgContainer.getAttribute('aria-checked') === 'true';
+    svgContainer.setAttribute('aria-checked', isChecked ? 'false' : 'true');
+
+    // Update the aria-label based on the checked state
+    svgContainer.setAttribute('aria-label', isChecked ? 'Check Progress Incomplete' : 'Check Progress Complete');
 
     if (svgContainer.classList.contains('clicked')) {
         svgContainer.classList.remove('clicked');
@@ -207,6 +221,10 @@ setupSectionButton("paymentSection", ".section1", ".actions1");
 
 
 
+
+function app() {
+
+}
 
 
 

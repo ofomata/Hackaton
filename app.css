@@ -115,6 +115,9 @@ input::placeholder{
   width: 20px;
   cursor: pointer;
 }
+.close svg:focus{
+  height: 20px;
+}
 .hero p{
   font-size: 12px;
   margin-bottom: 20px;
@@ -220,12 +223,23 @@ input::placeholder{
 .check-section svg{
     width: 20px;
 }
-.check-section p{
-    font-size: 12px;
+.check-section a{
+    font-size: 14px;
     color: #475467;
     font-weight: bold;
     cursor: pointer;
+    text-decoration: none;
 }
+.svg-container:focus{
+  outline: none;
+  border: 2px solid #005BD3;
+  outline: none;
+  border-radius: 4px;
+  width: 20px;
+  height: 20px;
+  margin-right: 19px;
+}
+
 
 
  
