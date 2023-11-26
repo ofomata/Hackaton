@@ -356,7 +356,7 @@ button:focus{
   gap: 32px;
   position: relative;
 }
-.pro{
+a.pro{
   position: absolute;
   top: 23.5px;
   left: 110px;
