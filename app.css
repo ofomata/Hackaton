@@ -13,7 +13,7 @@ header{
   align-items: center;
   padding: 16px;
 }
-.right{
+.nav-section{
   display: flex;
   align-items: center;
   gap: 12px;
@@ -102,7 +102,7 @@ input::placeholder{
   font-size: 12px;
 }
 
-.hero{
+.main-hero{
   background: #1C181d;
   margin-top: 16px;
   padding: 16px;
@@ -118,13 +118,13 @@ input::placeholder{
 .close svg:focus{
   height: 20px;
 }
-.hero p{
+.main-hero p{
   font-size: 12px;
   margin-bottom: 20px;
   line-height: 130%;
   padding-right: 16px;
 }
-.hero a{
+.main-hero a{
   text-decoration: none;
   color: #1C181d;
   background: #ffffff;
@@ -133,44 +133,42 @@ input::placeholder{
   padding: 5px 10px;
   border-radius: 5px;
 }
-.hero a:hover{
+.main-hero a:hover{
   background: #F7F7F7;
 }
-.hero a:active{
+.main-hero a:active{
   background: #F7F7F7;
 }
-.hero a:focus{
+.main-hero a:focus{
   border: 2px solid #005BD3;
   outline: none;
 }
-
 .sub-hero{
   background: #FFFFFF;
   margin-top: 16px;
   padding: 16px;
-  
 }
-.guide{
+.card-info{
   display: flex;
 }
-.title{
+.card-info-title{
   font-size: 14px;
   font-weight: bold;
   margin-bottom: 10px;
   color: #475467;
 }
-.body{
+.card-content{
   font-size: 12px;
   margin-bottom: 13px;
   line-height: 130%;
   color: #475467;
 }
-.update{
+.numbercount{
   font-size: 12px;
   margin-bottom: 10px;
   color: #475467;
 }
-.guide .dropdown svg{
+.card-info .dropdown svg{
   width: 20px;
   height: auto; 
   padding: 4px;
@@ -192,7 +190,7 @@ input::placeholder{
   outline: none;
   border-radius: 4px;
 }
-.guide .dropdown1 svg{
+.card-info .dropdown1 svg{
   width: 20px;
   height: auto; 
   padding: 4px;
@@ -317,20 +315,20 @@ input::placeholder{
   border-radius: 8px;
   padding: 5px;
 }
-.info{
+.check-info{
   margin-left: 40px;
 }
-.info p{
+.check-info p{
   font-size: 12px;
   color: #616161;
   margin-bottom: 5px;
 }
-.info a{
+.check-info a{
   text-decoration: none;
   color: #005BD3;
   font-size: 12px;
 }
-.info .btn{
+.check-info .check-info-btn{
   margin-top: 16px;
 }
 button{
@@ -364,7 +362,7 @@ a.pro{
   color: #1C181d;
   font-weight: bold;
 }
-.image img{
+.check-info-image img{
   height: auto;
   width: 120px;
   display: none;
@@ -381,10 +379,10 @@ a.pro{
   right: 16px;
   z-index: 999;
 }
-.line{
+.menu-container{
   padding: 5px;
 }
-.act1{
+.menu-profile-name{
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -393,20 +391,20 @@ a.pro{
   margin-bottom: 5px;
   border-radius: 4px;
 }
-.act1:hover{
+.menu-profile-name:hover{
   background: #F1F1F1;
   border-radius: 4px;
 }
-.act1:active{
+.menu-profile-name:active{
   background: #F1F1F1;
   border-radius: 4px;
 }
-.act1:focus{
+.menu-profile-name:focus{
   border: 2px solid #005BD3;
   outline: none;
   border-radius: 4px;
 }
-.act1 svg{
+.menu-profile-name svg{
   width: 20px;
   height: auto;
 }
@@ -426,7 +424,7 @@ a.pro{
   font-size: 12;
   font-weight: bold;
 }
-.act2{
+.menu-all-store{
   display: flex;
   align-items: center;
   gap: 10px;
@@ -434,24 +432,24 @@ a.pro{
   text-decoration: none;
   color: #1C181d;
 }
-.act2:hover{
+.menu-all-store:hover{
   background: #F1F1F1;
   border-radius: 4px;
 }
-.act2:active{
+.menu-all-store:active{
   background: #F1F1F1;
   border-radius: 4px;
 }
-.act2:focus{
+.menu-all-store:focus{
   border: 2px solid #005BD3;
   outline: none;
   border-radius: 4px;
 }
-.act2 svg{
+.menu-all-store svg{
   width: 20px;
   height: auto;
 }
-.act2 p{
+.menu-all-store p{
   font-size: 12px;
 }
 
@@ -484,15 +482,15 @@ ul li a{
   display: block;
   padding: 7px;
 }
-.acct p{
+.user-account p{
   font-weight: bold;
   margin-left: 5px;
   font-size: 12px;
 }
-.acct small{
+.user-account small{
   margin-left: 5px;
 }
-.acct{
+.user-account{
   margin: 10px 0;
 }
 
@@ -519,7 +517,7 @@ ul li a{
   align-items: center;
   gap: 16px;
 }
-.content{
+.alert-content{
   font-size: 12px;
   font-weight: bold;
   margin-top: 16px;
@@ -575,7 +573,7 @@ ul li a{
       width: 35%;
       margin-left: 180px;
   }
-  .right .notify-btn svg{
+  .nav-section .notify-btn svg{
       background: #322F33;
       padding: 4px;
       border-radius: 4px;
@@ -612,8 +610,10 @@ ul li a{
   main{
     display: grid;
     place-items: center;
+    max-width: 1350px;
+    margin: auto;
   }
-  .hero{
+  .main-hero{
     display: flex;
     align-items: center;
     gap: 200px;
@@ -621,12 +621,12 @@ ul li a{
     border-radius: 6px;
     padding: 8px 16px;
     }
-  .for-flex{
+  .sub-main-hero{
     display: flex;
     align-items: center;
     gap: 12px;
     }
-  .hero p{
+  .main-hero p{
     padding: unset;
     margin: unset;
     }
@@ -638,8 +638,8 @@ ul li a{
     padding: 8px 16px;
     width: 48.8%;
     }
-  .guide{
-    gap: 290px;
+  .card-info{
+    gap: 280px;
     }
 
   .menu{
@@ -648,7 +648,7 @@ ul li a{
   .alert{
     width: 18%;
     }
-  .image img{
+  .check-info-image img{
     display: unset;
     }
   }

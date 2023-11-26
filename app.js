@@ -238,7 +238,7 @@ function toggleSVG(buttonId) {
 document.addEventListener("DOMContentLoaded", function () {
     // Get DOM elements
     const progressBar = document.getElementById("progressBar");
-    const updateText = document.getElementById("updateText");
+    const updateCount = document.getElementById("updateCount");
     const toggleButtons = document.querySelectorAll(".toggleButton");
 
     // Initialize variables to track progress and button actions
@@ -295,7 +295,7 @@ document.addEventListener("DOMContentLoaded", function () {
     // Function to update the completion text based on the current progress
     function updateCompletionText() {
         const completionFraction = progress / 20; // Assuming each button increments by 20
-        updateText.textContent = `${completionFraction} / 5 completed`;
+        updateCount.textContent = `${completionFraction} / 5 completed`;
     }
 });
 
@@ -470,34 +470,34 @@ setupSectionButton("paymentSection", ".section1", ".actions1");
 /**
  * To remove the trial caallout
  *
- * This JavaScript code handles the functionality to remove a hero element from the DOM.
+ * This JavaScript code handles the functionality to remove a main-hero element from the DOM.
  * It utilizes a close button with both click and keyboard interaction (Enter key) to
  * trigger the removal action. The code enhances accessibility and provides a clean and
- * modular approach to removing the hero element.
+ * modular approach to removing the main-hero element.
  */
 
-// Get the close button and hero element from the DOM
+// Get the close button and main-hero element from the DOM
 const close = document.querySelector(".close");
-const hero = document.querySelector(".hero");
+const trialCallOut = document.querySelector(".main-hero");
 
 // Add a click event listener to the close button
 close.addEventListener("click", (event) => {
-    // Call the function to remove the hero element
-    removeHero();
+    // Call the function to remove the main-hero element
+    removetrialCallOut();
 });
 
 // Add a keydown event listener to the close button
 close.addEventListener("keydown", (event) => {
     // Check if the pressed key is the "Enter" key
     if (event.key === "Enter") {
-        // Call the function to remove the hero element
-        removeHero();
+        // Call the function to remove the main-hero element
+        removetrialCallOut();
     }
 });
 
-// Function to remove the hero element from the DOM
-function removeHero() {
-    hero.remove();
+// Function to remove the main-hero element from the DOM
+function removetrialCallOut() {
+    trialCallOut.remove();
 }
 
 
