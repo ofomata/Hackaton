@@ -1,34 +1,47 @@
-*{
+/* Resetting default margin, padding, and font for all elements */
+* {
   margin: 0;
   padding: 0;
   font-family: 'inter', sans-serif;
 }
-body{
+
+/* Styling the body with a light gray background */
+body {
   background: #F1F1F1;
 }
-header{
+
+/* Styling for the header section */
+header {
   background: #1A1A1A;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 12px 16px;
 }
-.nav-section{
+
+/* Styling for the navigation section within the header */
+.nav-section {
   display: flex;
   align-items: center;
   gap: 12px;
   margin-left: 8px;
 }
-.logo svg{
+
+/* Styling for the mobile logo with SVG */
+.logo svg {
   width: 32px;
   height: 32px;
   margin-right: 8px;
 }
-.logo2 svg{
+
+/* Styling for the desktop logo with SVG */
+.logo2 svg {
   width: 104.868px;
   height: 30px;
   display: none;
 }
+
+/* Styling for the search form */
 form {
   background: #322F33;
   padding: 0 10px;
@@ -36,25 +49,37 @@ form {
   border: .5px solid #616161;
   width: 100%;
 }
-form:hover{
+
+/* Hover effect for the search form */
+form:hover {
   border: .8px solid #F7F7F7;
 }
-form:active{
+
+/* Active state styling for the search form */
+form:active {
   border: 1.5px solid #F0F0F0;
 }
-form:focus-within{
+
+/* Focus within styling for the search form */
+form:focus-within {
   border: 2px solid #F0F0F0;
   outline: none;
 }
-.search-box svg{
+
+/* Styling for the search box with an icon */
+.search-box svg {
   width: 12px;
 }
-.search-box{
+
+/* Styling for the search box container */
+.search-box {
   display: flex;
   align-items: center;
   gap: 12px;
 }
-form input{
+
+/* Styling for the input inside the search form */
+form input {
   background: none;
   outline: none;
   border: none;
@@ -62,33 +87,44 @@ form input{
   display: block;
   width: 100%;
 }
-input::placeholder{
+
+/* Styling for the input placeholder */
+input::placeholder {
   color: #B5B5B5;
   font-size: 13px;
   font-weight: 500;
   line-height: 140%;
 }
-.notify-btn svg{
+
+/* Styling for the notification button with an icon */
+.notify-btn svg {
   width: 22px;
   height: auto;
   padding: 4px;
 }
-.notify-btn svg:hover{
+
+/* Hover effect for the notification button icon */
+.notify-btn svg:hover {
   background: #656266;
   cursor: pointer;
   border-radius: 4px;
 }
-.notify-btn svg:active{
+
+/* Active state styling for the notification button icon */
+.notify-btn svg:active {
   background: #656266;
   border-radius: 4px;
-  
 }
-.notify-btn:focus{
+
+/* Focus styling for the notification button */
+.notify-btn:focus {
   border: 2px solid #005BD3;
   outline: none;
   border-radius: 4px;
 }
-.account p{
+
+/* Styling for the account section */
+.account p {
   color: #E3E3E3;
   font-size: 12px;
   font-weight: 500;
@@ -96,7 +132,9 @@ input::placeholder{
   margin-right: 6px;
   display: none;
 }
-.account span{
+
+/* Styling for the status span inside the account section */
+.account span {
   background: #36FBA1;
   color: rgba(0, 0, 0, 0.40);
   padding: 5px 4px;
@@ -105,6 +143,7 @@ input::placeholder{
 }
 
 
+/* Styling for the menu container */
 .menu{
   display: none;
   background: #ffffff;
@@ -118,9 +157,13 @@ input::placeholder{
   border: 1px solid #DBDBDB;
   box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.05);
 }
+
+/* Styling for the menu container's content */
 .menu-container{
   padding: 5px;
 }
+
+/* Styling for the profile name in the menu */
 .menu-profile-name{
   display: flex;
   align-items: center;
@@ -130,28 +173,35 @@ input::placeholder{
   margin-bottom: 5px;
   border-radius: 8px;
 }
-.menu-profile-name:hover{
-  background: #F1F1F1;
-  border-radius: 8px;
-}
+
+/* Hover and active states for the profile name in the menu */
+.menu-profile-name:hover,
 .menu-profile-name:active{
   background: #F1F1F1;
   border-radius: 8px;
 }
+
+/* Focus styling for the profile name in the menu */
 .menu-profile-name:focus{
   border: 2px solid #005BD3;
   outline: none;
   border-radius: 8px;
 }
+
+/* Styling for the profile name icon in the menu */
 .menu-profile-name svg{
   width: 20px;
   height: auto;
 }
+
+/* Styling for the profile section in the menu */
 .profile{
   display: flex;
   align-items: center;
   gap: 10px;
 }
+
+/* Styling for the span within the profile section */
 .profile span{
   background: #36FBA1;
   color: rgba(0, 0, 0, 0.40);
@@ -160,12 +210,16 @@ input::placeholder{
   font-size: 10.5px;
   font-weight: 500;
 }
+
+/* Styling for the profile paragraph in the menu */
 .profile p{
   font-size: 13px;
   font-weight: 600;
   line-height: 140%;
   color: #303030;
 }
+
+/* Styling for the "All Store" section in the menu */
 .menu-all-store{
   display: flex;
   align-items: center;
@@ -177,49 +231,60 @@ input::placeholder{
   line-height: 140%;
   font-size: 13px;
 }
-.menu-all-store:hover{
-  background: #F1F1F1;
-  border-radius: 8px;
-}
+
+/* Hover and active states for the "All Store" section in the menu */
+.menu-all-store:hover,
 .menu-all-store:active{
   background: #F1F1F1;
   border-radius: 8px;
 }
+
+/* Focus styling for the "All Store" section in the menu */
 .menu-all-store:focus{
   border: 2px solid #005BD3;
   outline: none;
   border-radius: 8px;
 }
+
+/* Styling for the icon within the "All Store" section in the menu */
 .menu-all-store svg{
   width: 20px;
   height: auto;
 }
+
+/* Styling for the paragraph within the "All Store" section in the menu */
 .menu-all-store p{
   font-size: 12px;
 }
 
+/* Styling for the horizontal rule */
 hr {
   color: #E3E3E3;
   background-color: #E3E3E3;
   height: 0.5px;
   border: none;
 }
+
+/* Styling for the list items in the menu */
 ul li{
   list-style: none;
 }
-ul li a:hover{
-  background: #F1F1F1;
-  border-radius: 8px;
-}
+
+/* Hover and active states for the links within the menu */
+ul li a:hover,
 ul li a:active{
   background: #F1F1F1;
   border-radius: 8px;
 }
+
+/* Focus styling for the links within the menu */
 ul li a:focus{
   border: 2px solid #005BD3;
   border-radius: 8px;
   outline: none;
 }
+
+/* Styling for the links within the menu */
 ul li a{
   text-decoration: none;
   color: #303030;
@@ -229,6 +294,8 @@ ul li a{
   line-height: 140%;
   font-weight: 400;
 }
+
+/* Styling for the paragraph within the user account section */
 .user-account p{
   font-weight: 500;
   margin-left: 5px;
@@ -236,6 +303,8 @@ ul li a{
   line-height: 140%;
   color: #303030;
 }
+
+/* Styling for the small text within the user account section */
 .user-account small{
   margin-left: 5px;
   font-size: 12px;
@@ -244,10 +313,13 @@ ul li a{
   line-height: 130%;
   color: #616161;
 }
+
+/* Styling for the user account section */
 .user-account{
   margin: 10px 0;
 }
 
+/* Styling for the alert container */
 .alert{
   background: #FFFFFF;
   padding: 16px;
@@ -262,20 +334,27 @@ ul li a{
   box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.05);
 }
 
+/* Styling for the alert hero section */
 .alert-hero{
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
+
+/* Styling for the icons within the alert */
 .alert-icons{
   display: flex;
   align-items: center;
   gap: 16px;
 }
+
+/* Styling for the svg within the alert */
 .alert-icons svg{
   width: 20px;
   height: 20px;
 }
+
+/* Styling for the content within the alert */
 .alert-content{
   font-size: 13px;
   font-weight: 600;
@@ -285,6 +364,8 @@ ul li a{
   padding: 16px;
   color: #616161;
 }
+
+/* Styling for the text within the alert hero section */
 .alert-hero p{
   color: #303030;
   font-size: 14px;
@@ -293,13 +374,16 @@ ul li a{
 }
 
 
-.main-hero{
+/* Styling for the main hero section */
+.main-hero {
   background: #1A1A1A;
   margin-top: 32px;
   padding: 12px 8px 12px 16px;
   color: #E3E3E3;
 }
-.close svg{
+
+/* Close button styling within the main hero section */
+.close svg {
   position: absolute;
   top: 105px;
   right: 15px;
@@ -307,14 +391,18 @@ ul li a{
   height: 20px;
   cursor: pointer;
 }
-.main-hero p{
+
+/* Styling for paragraphs within the main hero section */
+.main-hero p {
   font-size: 13px;
   margin-bottom: 20px;
   padding-right: 16px;
   font-weight: 500;
   line-height: 140%;
 }
-.main-hero a{
+
+/* Styling for links within the main hero section */
+.main-hero a {
   text-decoration: none;
   color: #323232;
   background: #ffffff;
@@ -326,53 +414,68 @@ ul li a{
   border: 1px solid rgba(0, 0, 0, 0.10);
   box-shadow: 0px -1px 0px 0px #B5B5B5 inset;
 }
-.main-hero a:hover{
+
+/* Hover and active states for links */
+.main-hero a:hover,
+.main-hero a:active {
   background: #F7F7F7;
 }
-.main-hero a:active{
-  background: #F7F7F7;
-}
-.main-hero a:focus{
+
+/* Focus state for links */
+.main-hero a:focus {
   border: 1.2px solid #323232;
   outline: 2px solid #005BD3;
 }
-.sub-hero{
+
+/* Styling for sub-hero section */
+.sub-hero {
   background: #FFFFFF;
   margin-top: 16px;
   padding: 8px;
   border: 1px solid #DBDBDB;
   box-shadow: 0px 1px 0px 0px rgba(0, 0, 0, 0.05);
 }
-.card-info{
+
+/* Styling for card information */
+.card-info {
   display: flex;
 }
-.card-info-title{
+
+/* Styling for card information title */
+.card-info-title {
   font-size: 14px;
   font-weight: 600;
   margin-bottom: 10px;
   color: #303030;
   line-height: 140%;
 }
-.card-content{
+
+/* Styling for card content */
+.card-content {
   font-size: 13px;
   margin-bottom: 13px;
   line-height: 140%;
   color: #303030;
   font-weight: 400;
 }
-.sub-hero span{
+
+/* Styling for number count section */
+.sub-hero span {
   display: flex;
   align-items: center;
   gap: 16px;
   position: relative;
 }
-.numbercount{
+
+.numbercount {
   font-size: 12px;
   margin-bottom: 10px;
   color: #303030;
   font-weight: 400;
   line-height: 130%;
 }
+
+/* Styling for progress bar container */
 .progress-container {
   width: 80px;
   height: 4px;
@@ -383,78 +486,104 @@ ul li a{
   top: 6px;
   left: 100px;
 }
+
+/* Styling for progress bar */
 .progress-bar {
   height: 100%;
   width: 0;
   background-color: #1C181d;
   transition: width 0.3s ease;
 }
-.card-info .dropdown svg{
+
+/* Styling for dropdown icon in card information */
+.card-info .dropdown svg {
   width: 20px;
-  height: auto; 
+  height: auto;
   padding: 4px;
   margin: unset;
 }
-.dropdown{
+
+/* Styling for dropdown section */
+.dropdown {
   height: 30px;
 }
-.dropdown:hover{
+
+/* Hover and active states for dropdown section */
+.dropdown:hover,
+.dropdown:active {
   background: #F1F1F1;
   border-radius: 6px;
 }
-.dropdown:active{
-  background: #F1F1F1;
-  border-radius: 6px;
-}
-.dropdown:focus{
+
+/* Focus state for dropdown section */
+.dropdown:focus {
   border: 2px solid #005BD3;
   outline: none;
   border-radius: 6px;
 }
-.card-info .dropdown1 svg{
+
+/* Styling for another dropdown icon in card information */
+.card-info .dropdown1 svg {
   width: 20px;
-  height: auto; 
+  height: auto;
   padding: 4px;
   margin: unset;
 }
-.dropdown1{
+
+/* Styling for another dropdown section */
+.dropdown1 {
   display: none;
   height: 30px;
 }
-.dropdown1:hover{
+
+/* Hover and active states for another dropdown section */
+.dropdown1:hover,
+.dropdown1:active {
   background: #F1F1F1;
   border-radius: 6px;
 }
-.dropdown1:active{
-  background: #F1F1F1;
-  border-radius: 6px;
-}
-.dropdown1:focus{
+
+/* Focus state for another dropdown section */
+.dropdown1:focus {
   border: 2px solid #005BD3;
   outline: none;
   border-radius: 6px;
 }
-.wrapper{
+
+/* Styling for wrapper section */
+.wrapper {
   margin-top: 16px;
 }
-.actions, .actions2, .actions3, .actions4, .actions5 {
+
+/* Styling for various action sections */
+.actions, 
+.actions2, 
+.actions3, 
+.actions4, 
+.actions5 {
   border-radius: 8px;
   padding: 5px;
   padding-bottom: 12px;
 }
-.check-section{
-    display: flex;
-    align-items: center;
+
+/* Styling for the check section */
+.check-section {
+  display: flex;
+  align-items: center;
 }
-.check-section a{
-    font-size: 13px;
-    color: #303030;
-    font-weight: 500;
-    cursor: pointer;
-    line-height: 140%;
-    text-decoration: none;
-    margin-left: 10px;
+
+/* Styling for links within the check section */
+.check-section a {
+  font-size: 13px;
+  color: #303030;
+  font-weight: 500;
+  cursor: pointer;
+  line-height: 140%;
+  text-decoration: none;
+  margin-left: 10px;
 }
+
+/* Styling for SVG container */
 .svg-container {
   width: 20px;
   height: 20px;
@@ -464,6 +593,8 @@ ul li a{
   cursor: pointer;
 }
 
+
+/* Styling for different states of SVG elements within .svg-container */
 .initial-svg,
 .hovered-svg,
 .active-svg,
@@ -475,25 +606,30 @@ ul li a{
   height: 100%;
 }
 
+/* Initially hide hovered-svg, active-svg, and clicked-svg */
 .hovered-svg,
 .active-svg,
 .clicked-svg {
   display: none;
 }
 
+/* Show hovered-svg when .svg-container is hovered, hide initial-svg */
 .svg-container:hover .initial-svg {
   display: none;
 }
 
+/* Show hovered-svg when .svg-container is hovered and not clicked */
 .svg-container:hover:not(.clicked) .hovered-svg {
   display: inline-block;
 }
 
+/* Show active-svg when .svg-container is in the active state and rotate it */
 .svg-container.active .active-svg {
   display: inline-block;
   animation: rotateActive 0.5s linear forwards;
 }
 
+/* Show clicked-svg with fade-in effect after a slight delay */
 .svg-container.clicked .clicked-svg {
   display: inline-block;
   opacity: 0;
@@ -501,56 +637,76 @@ ul li a{
   animation-delay: 0.1ms; /* Delay the appearance of clicked-svg after rotation */
 }
 
+/* Define keyframes for rotating the active-svg */
 @keyframes rotateActive {
   0% {
-      transform: rotate(0deg);
+    transform: rotate(0deg);
   }
   100% {
-      transform: rotate(360deg);
+    transform: rotate(360deg);
   }
 }
 
+/* Define keyframes for fading in the clicked-svg */
 @keyframes fadeInClicked {
   0% {
-      opacity: 0;
+    opacity: 0;
   }
   100% {
-      opacity: 1;
+    opacity: 1;
   }
 }
-.svg-container:focus{
+
+/* Styling for focus state of .svg-container */
+.svg-container:focus {
   outline: none;
   border: 2px solid #005BD3;
   outline: none;
   border-radius: 4px;
 }
-.section1, .section2, .section3, .section4, .section5 {
+
+/* Styling for multiple sections (section1 to section5) */
+.section1, 
+.section2, 
+.section3, 
+.section4, 
+.section5 {
   display: flex;
   align-items: center;
   justify-content: space-between;
   display: none;
   margin-top: 16px;
 }
-.check-info{
+
+/* Styling for check-info section */
+.check-info {
   margin-left: 30px;
 }
-.check-info p{
+
+/* Styling for paragraphs within check-info section */
+.check-info p {
   font-size: 13px;
   color: #616161;
   font-weight: 500;
   line-height: 140%;
 }
-.check-info a{
+
+/* Styling for links within check-info section */
+.check-info a {
   text-decoration: none;
   color: #005BD3;
   font-size: 14px;
   font-weight: 500;
   line-height: 140%;
 }
-.check-info-btn{
-  margin-top: 16px; 
+
+/* Styling for check-info-btn section */
+.check-info-btn {
+  margin-top: 16px;
 }
-button{
+
+/* Styling for buttons */
+button {
   background: #404040;
   padding: 6px 12px;
   color: #FFFFFF;
@@ -561,23 +717,28 @@ button{
   border-left: 1.5px solid rgba(255, 255, 255, 0.20);
   box-shadow: 0px 0px 0px 1.5px #333, 0px 1px 0px 1.5px #333, 0px 2px 0px 0px #000;
 }
-button:hover{
+
+/* Hover, active, and focus states for buttons */
+button:hover,
+button:active {
   background: #1C181d;
 }
-button:active{
-  background: #1C181d;
-}
-button:focus{
+
+button:focus {
   border: 2px solid #F1F1F1;
   outline: 2px solid #005BD3;
 }
-.product{
+
+/* Styling for product section */
+.product {
   display: flex;
   align-items: center;
   gap: 32px;
   position: relative;
 }
-a.pro{
+
+/* Styling for links within product section */
+a.pro {
   position: absolute;
   top: 17px;
   left: 110px;
@@ -587,19 +748,20 @@ a.pro{
   padding: 6px 12px;
 }
 
-.pro:hover{
+/* Hover, active, and focus states for links within product section */
+.pro:hover,
+.pro:active {
   background: #F1F1F1;
   border-radius: 6px;
 }
-.pro:active{
-  background: #F1F1F1;
-  border-radius: 6px;
-}
-.pro:focus{
+
+.pro:focus {
   outline: 2px solid #005BD3;
   border-radius: 6px;
 }
-.check-info-image img{
+
+/* Styling for check-info-image section */
+.check-info-image img {
   width: 156.145px;
   height: 120px;
   display: none;
@@ -607,68 +769,96 @@ a.pro{
   right: 5px;
   top: -80px;
 }
-.check-info-image{
+
+/* Styling for check-info-image section */
+.check-info-image {
   position: relative;
 }
 
+
   
+/* Media query for screens with a minimum width of 680px */
 @media (min-width: 680px) {
-  .logo2 svg{
-      display: unset;
+  /* Styles for displaying the second logo when the screen width is at least 680px */
+  .logo2 svg {
+    display: unset;
   }
-  .logo2{
-      position: absolute;
-      left: 16px;
+  /* Positioning and styling for the second logo */
+  .logo2 {
+    position: absolute;
+    left: 16px;
   }
-  .logo svg{
-      display: none;
+  /* Styles for hiding the default logo when the screen width is at least 680px */
+  .logo svg {
+    display: none;
   }
-  
-  form{
-      width: 35%;
-      margin-left: 180px;
+
+  /* Styles for the form container */
+  form {
+    width: 35%;
+    margin-left: 180px;
   }
-  .nav-section .notify-btn svg{
-      background: #303030;
-      padding: 4px;
-      border-radius: 4px;
+
+  /* Styles for notification button in the navigation section */
+  .nav-section .notify-btn svg {
+    background: #303030;
+    padding: 4px;
+    border-radius: 4px;
   }
-  .notify-btn svg:hover{
-      background: #656266;
-      cursor: pointer;
+
+  /* Hover effect for the notification button */
+  .notify-btn svg:hover {
+    background: #656266;
+    cursor: pointer;
   }
-  .notify-btn svg:active{
+
+  /* Active state styling for the notification button */
+  .notify-btn svg:active {
     background: #656266;
   }
-  .account{
+
+  /* Styles for the account section */
+  .account {
     background: #303030;
     padding: 2px;
     border-radius: 4px;
     padding-left: 6px;
     display: flex;
     align-items: center;
-    }
-  .account:hover{
+  }
+
+  /* Hover effect for the account section */
+  .account:hover {
     background: #656266;
     cursor: pointer;
-    }
-  .account:active{
+  }
+
+  /* Active state styling for the account section */
+  .account:active {
     background: #656266;
-    }
-  .account:focus{
+  }
+
+  /* Focus state styling for the account section */
+  .account:focus {
     border: 2px solid #005BD3;
     outline: none;
-    }
-  .account p{
+  }
+
+  /* Styles for paragraph within the account section */
+  .account p {
     display: unset;
-    }
-  main{
+  }
+
+  /* Styles for the main container */
+  main {
     display: grid;
     place-items: center;
     max-width: 1350px;
     margin: auto;
   }
-  .main-hero{
+
+  /* Styles for the main hero section */
+  .main-hero {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -676,39 +866,56 @@ a.pro{
     border-radius: 6px;
     padding: 12px 8px 12px 16px;
     width: 800px;
-    }
-  .sub-main-hero{
+  }
+  
+  /* Styling for sub-main-hero section */
+  .sub-main-hero {
     display: flex;
     align-items: center;
     gap: 12px;
-    }
-  .main-hero p{
+  }
+
+  /* Styling for paragraph inside .main-hero */
+  .main-hero p {
     padding: unset;
     margin: unset;
-    }
-  .close svg{
+  }
+
+  /* Reset position for SVG inside .close */
+  .close svg {
     position: unset;
-    }
-  .sub-hero{
+  }
+
+  /* Styling for sub-hero section */
+  .sub-hero {
     border-radius: 18px;
     padding: 8px 16px;
     width: 800px;
-    }
-  .card-info{
-    justify-content: space-between;
-    }
+  }
 
-  .menu{
+  /* Styling for card-info section */
+  .card-info {
+    justify-content: space-between;
+  }
+
+  /* Styling for menu section */
+  .menu {
     width: 23.5%;
-    }
-  .alert{
+  }
+
+  /* Styling for alert section */
+  .alert {
     width: 25%;
-    }
-    .check-info p{
-      padding-right: 230px;
-    }
-    .check-info-image img{
-      display: unset;
-      }
-    }
+  }
+
+  /* Styling for paragraph inside .check-info */
+  .check-info p {
+    padding-right: 230px;
+  }
+
+  /* Display the image inside .check-info-image */
+  .check-info-image img {
+    display: unset;
+  }
+}
   
