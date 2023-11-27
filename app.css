@@ -17,6 +17,7 @@ header {
   justify-content: space-between;
   align-items: center;
   padding: 12px 16px;
+  max-width: 100%;
 }
 
 /* Styling for the navigation section within the header */
@@ -867,7 +868,7 @@ a.pro {
     padding: 12px 8px 12px 16px;
     width: 800px;
   }
-  
+
   /* Styling for sub-main-hero section */
   .sub-main-hero {
     display: flex;
