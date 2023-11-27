@@ -112,9 +112,10 @@ input::placeholder{
   text-align: left;
   width: 80%;
   position: absolute;
-  top: 80px;
+  top: 86px;
   right: 16px;
   z-index: 999;
+  border: 1px solid #DBDBDB;
   box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.05);
 }
 .menu-container{
@@ -257,6 +258,7 @@ ul li a{
   right: 16px;
   z-index: 999;
   display: none;
+  border: 1px solid #DBDBDB;
   box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.05);
 }
 
@@ -321,6 +323,7 @@ ul li a{
   line-height: 130%;
   padding: 6px 12px;
   border-radius: 6px;
+  border: 1px solid rgba(0, 0, 0, 0.10);
   box-shadow: 0px -1px 0px 0px #B5B5B5 inset;
 }
 .main-hero a:hover{
@@ -330,13 +333,14 @@ ul li a{
   background: #F7F7F7;
 }
 .main-hero a:focus{
-  border: 2px solid #005BD3;
-  outline: none;
+  border: 1.2px solid #323232;
+  outline: 2px solid #005BD3;
 }
 .sub-hero{
   background: #FFFFFF;
   margin-top: 16px;
   padding: 8px;
+  border: 1px solid #DBDBDB;
   box-shadow: 0px 1px 0px 0px rgba(0, 0, 0, 0.05);
 }
 .card-info{
@@ -430,6 +434,9 @@ ul li a{
   outline: none;
   border-radius: 6px;
 }
+.wrapper{
+  margin-top: 16px;
+}
 .actions, .actions2, .actions3, .actions4, .actions5 {
   border-radius: 8px;
   padding: 5px;
@@ -439,9 +446,6 @@ ul li a{
     display: flex;
     align-items: center;
 }
-.check-section svg{
-    width: 20px;
-}
 .check-section a{
     font-size: 13px;
     color: #303030;
@@ -449,10 +453,11 @@ ul li a{
     cursor: pointer;
     line-height: 140%;
     text-decoration: none;
+    margin-left: 10px;
 }
 .svg-container {
-  width: 40px;
-  height: 40px;
+  width: 20px;
+  height: 20px;
   transition: transform 0.3s ease-in-out;
   display: inline-block;
   position: relative;
@@ -518,23 +523,20 @@ ul li a{
   border: 2px solid #005BD3;
   outline: none;
   border-radius: 4px;
-  width: 20px;
-  height: 20px;
-  margin-right: 19px;
 }
 .section1, .section2, .section3, .section4, .section5 {
   display: flex;
   align-items: center;
   justify-content: space-between;
   display: none;
+  margin-top: 16px;
 }
 .check-info{
-  margin-left: 40px;
+  margin-left: 30px;
 }
 .check-info p{
   font-size: 13px;
   color: #616161;
-  margin-bottom: 5px;
   font-weight: 500;
   line-height: 140%;
 }
@@ -545,15 +547,18 @@ ul li a{
   font-weight: 500;
   line-height: 140%;
 }
-.check-info .check-info-btn{
-  margin-top: 16px;
+.check-info-btn{
+  margin-top: 16px; 
 }
 button{
   background: #404040;
   padding: 6px 12px;
   color: #FFFFFF;
   font-size: 12px;
-  border-radius: 8px;
+  border-radius: 6px;
+  border-top: 1.5px solid rgba(255, 255, 255, 0.20);
+  border-right: 1.5px solid rgba(255, 255, 255, 0.20);
+  border-left: 1.5px solid rgba(255, 255, 255, 0.20);
   box-shadow: 0px 0px 0px 1.5px #333, 0px 1px 0px 1.5px #333, 0px 2px 0px 0px #000;
 }
 button:hover{
@@ -563,8 +568,8 @@ button:active{
   background: #1C181d;
 }
 button:focus{
-  border: 2px solid #005BD3;
-  outline: none;
+  border: 2px solid #F1F1F1;
+  outline: 2px solid #005BD3;
 }
 .product{
   display: flex;
@@ -574,16 +579,36 @@ button:focus{
 }
 a.pro{
   position: absolute;
-  top: 23.5px;
+  top: 17px;
   left: 110px;
   font-size: 12px;
   color: #1C181d;
   font-weight: bold;
+  padding: 6px 12px;
+}
+
+.pro:hover{
+  background: #F1F1F1;
+  border-radius: 6px;
+}
+.pro:active{
+  background: #F1F1F1;
+  border-radius: 6px;
+}
+.pro:focus{
+  outline: 2px solid #005BD3;
+  border-radius: 6px;
 }
 .check-info-image img{
   width: 156.145px;
   height: 120px;
   display: none;
+  position: absolute;
+  right: 5px;
+  top: -80px;
+}
+.check-info-image{
+  position: relative;
 }
 
   
@@ -679,11 +704,11 @@ a.pro{
   .alert{
     width: 25%;
     }
-  .check-info-image img{
-    display: unset;
+    .check-info p{
+      padding-right: 230px;
     }
-    .actions, .actions2, .actions3, .actions4, .actions5 {
-      padding-bottom: 5px;
+    .check-info-image img{
+      display: unset;
+      }
     }
-  }
   
