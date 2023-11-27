@@ -33,6 +33,7 @@ document.addEventListener("keydown", (event) => {
     // Check if the 'Enter' key is pressed on the button and the menu is closed, then open the menu
     else if (event.key === "Enter" && document.activeElement === button && menu.style.display !== "block") {
         openMenu();
+        alert.style.display = "none";
     }
     // Check if the menu is open and the arrow keys are pressed, then navigate the menu
     else if (menu.style.display === "block" && (event.key === "ArrowUp" || event.key === "ArrowDown")) {
@@ -134,6 +135,7 @@ document.addEventListener("keydown", (event) => {
   // Check if the 'Enter' key is pressed on the notification and the alert is closed, then open the alert
   else if (event.key === "Enter" && document.activeElement === notify && alert.style.display !== "block") {
     openAlert();
+    menu.style.display = "none";
   }
 });
 
@@ -422,6 +424,11 @@ function getSectionAndAction(sectionSelector, actionSelector) {
 sections.forEach(({ buttonId, sectionSelector, actionSelector }) => {
     initializeSectionButton(buttonId, sectionSelector, actionSelector);
 });
+
+// Open the first section by default
+const firstSection = document.querySelector(".section1");
+const firstAction = document.querySelector(".actions");
+toggleSection(firstSection, firstAction);
 
 
 
